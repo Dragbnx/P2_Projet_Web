@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Poppins:wght@500;600;700&family=Open+Sans:wght@300;400;600;700&family=Roboto:wght@300;400;500;600;700&display=swap');
+
 * {
   margin: 0;
   padding: 0;
@@ -5,8 +7,8 @@
 }
 
 body {
-  font-family: 'Segoe UI', Arial, sans-serif;
-  background: #f0f0f0;
+  font-family: 'Open Sans', 'Roboto', sans-serif;
+  background: #FFFFFF;
   color: #333;
 }
 
@@ -35,11 +37,11 @@ nav {
 
 .nav-links a:hover,
 .site-footer .footer-nav a:hover {
-  color: rgb(20, 123, 191);
+  color: #0A316C;
 }
 
 .nav-active {
-  color: rgb(20, 123, 191) !important;
+  color: #0A316C !important;
   font-weight: 600;
 }
 
@@ -85,7 +87,7 @@ nav {
 
 .hero-label_1 {
   font-size: 19px;
-  background: rgb(20, 123, 191);
+  background: #0A316C;
   padding: 14px 32px;
   border-radius: 4px;
   letter-spacing: 0.14em;
@@ -112,8 +114,8 @@ nav {
 .hero-cta {
   display: inline-block;
   padding: 14px 32px;
-  background: rgb(255, 255, 255);
-  color: rgb(20, 123, 191);
+  background: #FDCB6E;
+  color: #0A316C;
   text-decoration: none;
   border-radius: 4px;
   font-weight: 600;
@@ -122,7 +124,8 @@ nav {
 }
 
 .hero-cta:hover {
-  background: rgb(14, 95, 150);
+  background: #81ECEC;
+  color: #0A316C;
 }
 
 .intro {
@@ -140,10 +143,12 @@ nav {
 }
 
 .intro h1 {
-  font-size: 36px;
+  font-size: 40px;
   font-weight: 700;
-  color: #2d2d2d;
+  color: #0A316C;
   margin-bottom: 20px;
+  line-height: 1.2;
+  font-family: 'Montserrat', 'Poppins', sans-serif;
 }
 
 .intro blockquote {
@@ -174,9 +179,12 @@ nav {
 }
 
 .formations-section h2 {
-  font-size: 30px;
-  color: #2d2d2d;
+  font-size: 32px;
+  color: #0A316C;
   margin-bottom: 14px;
+  line-height: 1.3;
+  font-family: 'Montserrat', 'Poppins', sans-serif;
+  font-weight: 600;
 }
 
 .formations-section p {
@@ -187,9 +195,18 @@ nav {
 }
 
 .formations-list {
-  list-style: disc;
+  list-style: none;
   padding-left: 24px;
   color: #2f2f2f;
+}
+
+.formations-list li::before {
+  content: '▶ ';
+  color: #FFFFFF;
+  font-weight: bold;
+  display: inline-block;
+  width: 1.5em;
+  margin-left: -1.5em;
 }
 
 .formations-list li {
@@ -207,7 +224,7 @@ nav {
   justify-content: space-between;
   margin-bottom: 20px;
   padding: 15px;
-  background: linear-gradient(135deg, rgb(20, 123, 191), rgb(15, 100, 160));
+  background: linear-gradient(135deg, #0A316C, #081e47);
   border-radius: 6px;
   color: #fff;
 }
@@ -250,7 +267,7 @@ nav {
 .weekday {
   text-align: center;
   font-weight: 600;
-  color: rgb(20, 123, 191);
+  color: #0A316C;
   padding: 10px 0;
   font-size: 14px;
 }
@@ -281,9 +298,9 @@ nav {
 
 .calendar-day.today,
 .calendar-day:hover {
-  background: rgb(20, 123, 191);
+  background: #0A316C;
   color: #fff;
-  border-color: rgb(20, 123, 191);
+  border-color: #0A316C;
 }
 
 .calendar-day:hover {
@@ -390,13 +407,13 @@ nav {
   justify-content: space-between;
   align-items: center;
   margin-bottom: 20px;
-  border-bottom: 2px solid rgb(20, 123, 191);
+  border-bottom: 2px solid #0A316C;
   padding-bottom: 10px;
 }
 
 .event-modal-header h3 {
   margin: 0;
-  color: rgb(20, 123, 191);
+  color: #0A316C;
   font-size: 20px;
 }
 
@@ -417,7 +434,7 @@ nav {
 }
 
 .close-modal:hover {
-  background: #f0f0f0;
+  background: #f5f5f5;
   color: #333;
 }
 
@@ -426,7 +443,7 @@ nav {
 }
 
 .event-modal-body h4 {
-  color: rgb(20, 123, 191);
+  color: #0A316C;
   font-size: 16px;
   margin: 15px 0 10px;
 }
@@ -444,7 +461,7 @@ nav {
 
 .event-item {
   background: #f9f9f9;
-  border-left: 4px solid rgb(20, 123, 191);
+  border-left: 4px solid #0A316C;
   padding: 10px 12px;
   margin-bottom: 8px;
   border-radius: 4px;
@@ -455,7 +472,7 @@ nav {
 }
 
 .event-item:hover {
-  background: #f0f0f0;
+  background: #f5f5f5;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
@@ -504,14 +521,14 @@ nav {
 
 .add-event-form input:focus {
   outline: none;
-  border-color: rgb(20, 123, 191);
-  box-shadow: 0 0 0 3px rgba(20, 123, 191, 0.1);
+  border-color: #0A316C;
+  box-shadow: 0 0 0 3px rgba(10, 49, 108, 0.1);
 }
 
 .add-event-form button {
   width: 100%;
   padding: 10px 16px;
-  background: rgb(20, 123, 191);
+  background: #0A316C;
   color: #fff;
   border: none;
   border-radius: 4px;
@@ -522,8 +539,9 @@ nav {
 }
 
 .add-event-form button:hover {
-  background: rgb(15, 100, 160);
-  box-shadow: 0 2px 8px rgba(20, 123, 191, 0.3);
+  background: #81ECEC;
+  color: #0A316C;
+  box-shadow: 0 2px 8px rgba(10, 49, 108, 0.3);
 }
 
 .add-event-form button:active {
@@ -565,23 +583,23 @@ nav {
 
 .site-footer {
   margin-top: 48px;
-  background: #fff;
-  border-top: 1px solid #e0e0e0;
+  background: #1a1a1a;
+  border-top: 1px solid #333;
 }
 
 .site-footer .footer-content {
   max-width: 1100px;
   margin: 0 auto;
-  padding: 18px 40px;
+  padding: 24px 40px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 8px;
+  gap: 12px;
   text-align: center;
 }
 
 .site-footer .footer-copy {
-  color: #6b6b6b;
+  color: #aaa;
   font-size: 14px;
   line-height: 1.4;
 }
@@ -589,17 +607,18 @@ nav {
 .site-footer .footer-nav {
   display: flex;
   justify-content: center;
+  background: transparent;
 }
 
 .site-footer .footer-nav a {
   text-decoration: none;
-  color: #555;
+  color: #aaa;
   font-size: 15px;
   font-weight: 600;
 }
 
 .site-footer .footer-nav a:hover {
-  color: rgb(20, 123, 191);
+  color: #fff;
 }
 
 /* Catalogue projets */
@@ -690,7 +709,7 @@ nav {
 .tag {
   font-size: 12px;
   background: #eef6ff;
-  color: rgb(20, 123, 191);
+  color: #0A316C;
   padding: 4px 8px;
   border-radius: 999px;
 }

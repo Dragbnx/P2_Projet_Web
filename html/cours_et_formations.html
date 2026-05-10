@@ -3,88 +3,82 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>EFREI – Département informatique</title>
+  <title>Cours &amp; Formations – EFREI Informatique</title>
   <link rel="stylesheet" href="../css/style.css" />
   <script type="text/javascript" src="../js/calendar.js"></script>
 </head>
-    <body>
-        <header>
-            <!-- NAVIGATION -->
-            <nav>
-                <ul class="nav-links">
-                    <li><a href="accueil.html">Accueil</a></li>
-                    <li><a href="cours_et_formations.html">Cours & formations</a></li>
-                    <li><a href="equipe_enseignante.html">Équipe enseignante</a></li>
-                    <li><a href="projets_etudiants.html">Projets étudiants</a></li>
-                    <li><a href="nous_rejoindre.html">Nous rejoindre</a></li>
-                    <li><a href="a_propos.html">À propos</a></li>
-                </ul>
-
-                <img 
-                    src="../img/efrei_1.1.png" 
-                    alt="Logo EFREI" 
-                    width = "140"
-                    height = "47"
-                    class = "nav-logo">
-            </nav>
-
-            <div class="hero">
-                <img
-                    src="https://objectif-ast.fr/wp-content/uploads/2024/06/Efrei-plan-strategique.png"
-                    alt="EFREI plan stratégique"/>
-            </div>
-        </header>
-
-        <!-- Formations -->
-        <section class="formations-section">
-            <h1>Formations proposees par le pole informatique</h1>
-            <p>Le pole informatique de l'ecole propose un parcours progressif allant du Bachelor au cycle ingenieur et aux specialises post-bac+5.</p>
-
-            <ul class="formations-list">
-                <li>Bachelor Informatique et Numerique</li>
-                <li>Bachelor Developpement Web et Applications</li>
-                <li>Bachelor Data et Intelligence Artificielle</li>
-                <li>Cycle Ingenieur Informatique (Programme Grande Ecole)</li>
-                <li>MSc Cloud Computing et DevOps</li>
-                <li>MSc Cybersecurite</li>
-                <li>MSc Data Engineering et IA</li>
+<body>
+    <header>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="accueil.html">Accueil</a></li>
+                <li><a href="cours_et_formations.html" class="nav-active">Cours &amp; formations</a></li>
+                <li><a href="equipe_enseignante.html">Équipe enseignante</a></li>
+                <li><a href="projets_etudiants.html">Projets étudiants</a></li>
+                <li><a href="nous_rejoindre.html">Nous rejoindre</a></li>
+                <li><a href="a_propos.html">À propos</a></li>
             </ul>
-        </section>
+            <img
+                src="../img/efrei_1.1.png"
+                alt="Logo EFREI"
+                width="140"
+                height="47"
+                class="nav-logo" />
+        </nav>
 
-        <!-- CALENDRIER -->
-        <div class="calendar-container">
-            <div class="calendar">
-                <div class="calendar-header">
-                    <button type="button" class="calendar-btn prev-btn" id="prevMonth">❮</button>
-                    <h2 id="monthYear"></h2>
-                    <button type="button" class="calendar-btn next-btn" id="nextMonth">❯</button>
-                </div>
-                
-                <div class="calendar-weekdays">
-                    <div class="weekday">Lun</div>
-                    <div class="weekday">Mar</div>
-                    <div class="weekday">Mer</div>
-                    <div class="weekday">Jeu</div>
-                    <div class="weekday">Ven</div>
-                    <div class="weekday">Sam</div>
-                    <div class="weekday">Dim</div>
-                </div>
-                
-                <div class="calendar-days" id="calendarDays"></div>
+        <div class="hero">
+            <img
+                src="https://efrei.nous-recrutons.fr/wp-content/uploads/sites/95/2023/02/Enseignant-chercheur-en-cybersecutrite-1.jpg"
+                alt="EFREI plan stratégique" />
+            <div class="hero-overlay">
+                <p class="hero-label_1">Département Informatique · EFREI Paris</p>
+                <h1 class="hero-title">Cours &amp; Formations</h1>
+                <a href="accueil.html" class="hero-cta">Retourner à l'accueil</a>
             </div>
         </div>
+    </header>
 
-        <footer class="site-footer">
-            <div class="footer-content">
-                <p class="footer-copy">EFREI 2026 · Département informatique · Tous droits réservés</p>
-                <nav class="footer-nav" aria-label="Navigation de bas de page">
-                    <a href="a_propos.html">À propos</a>
-                </nav>
+    <section class="formations-section">
+        <h2>Formations proposées par le pôle informatique</h2>
+        <p>Le pôle informatique de l'école propose un parcours progressif allant du Bachelor au cycle ingénieur et aux spécialisés post-bac+5.</p>
+        <ul class="formations-list">
+            <li>Bachelor Informatique et Numérique</li>
+            <li>Bachelor Développement Web et Applications</li>
+            <li>Bachelor Data et Intelligence Artificielle</li>
+            <li>Cycle Ingénieur Informatique (Programme Grande École)</li>
+            <li>MSc Cloud Computing et DevOps</li>
+            <li>MSc Cybersécurité</li>
+            <li>MSc Data Engineering et IA</li>
+        </ul>
+    </section>
+
+    <div class="calendar-container">
+        <div class="calendar">
+            <div class="calendar-header">
+                <button type="button" class="calendar-btn prev-btn" id="prevMonth">&lt;</button>
+                <h2 id="monthYear"></h2>
+                <button type="button" class="calendar-btn next-btn" id="nextMonth">&gt;</button>
             </div>
-        </footer>
+            <div class="calendar-weekdays">
+                <div class="weekday">Lun</div>
+                <div class="weekday">Mar</div>
+                <div class="weekday">Mer</div>
+                <div class="weekday">Jeu</div>
+                <div class="weekday">Ven</div>
+                <div class="weekday">Sam</div>
+                <div class="weekday">Dim</div>
+            </div>
+            <div class="calendar-days" id="calendarDays"></div>
+        </div>
+    </div>
 
-
-        
-
-    </body>
+    <footer class="site-footer">
+        <div class="footer-content">
+            <p class="footer-copy">EFREI 2026 · Département informatique · Tous droits réservés</p>
+            <nav class="footer-nav" aria-label="Navigation de bas de page">
+                <a href="a_propos.html">À propos</a>
+            </nav>
+        </div>
+    </footer>
+</body>
 </html>

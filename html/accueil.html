@@ -3,54 +3,203 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>EFREI – Département informatique</title>
+  <title>Accueil – EFREI Informatique</title>
   <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/accueil.css" />
 </head>
 <body>
-    <header>
-        <!-- NAVIGATION -->
-        <nav>
-            <ul class="nav-links">
-                <li><a href="accueil.html">Accueil</a></li>
-                <li><a href="cours_et_formations.html">Cours & formations</a></li>
-                <li><a href="equipe_enseignante.html">Équipe enseignante</a></li>
-                <li><a href="projets_etudiants.html">Projets étudiants</a></li>
-                <li><a href="nous_rejoindre.html">Nous rejoindre</a></li>
-                <li><a href="a_propos.html">À propos</a></li>
-            </ul>
 
-            <img 
-                src="../img/efrei_1.1.png" 
-                alt="Logo EFREI" 
-                width = "140"
-                height = "47"
-                class = "nav-logo">
-        </nav>
+  
+  <header>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="accueil.html" class="nav-active">Accueil</a></li>
+        <li><a href="cours_et_formations.html">Cours &amp; formations</a></li>
+        <li><a href="equipe_enseignante.html">Équipe enseignante</a></li>
+        <li><a href="projets_etudiants.html">Projets étudiants</a></li>
+        <li><a href="nous_rejoindre.html">Nous rejoindre</a></li>
+        <li><a href="a_propos.html">À propos</a></li>
+      </ul>
+      <img src="../img/efrei_1.1.png" alt="Logo EFREI" width="140" height="47" class="nav-logo" />
+    </nav>
 
-        <div class="hero">
-            <img
-                src="https://objectif-ast.fr/wp-content/uploads/2024/06/Efrei-plan-strategique.png"
-                alt="EFREI plan stratégique"/>
+    
+    <div class="hero">
+      <img
+        src="https://efrei.nous-recrutons.fr/wp-content/uploads/sites/95/2023/02/Enseignant-chercheur-en-cybersecutrite-1.jpg"
+        alt="EFREI plan stratégique" />
+      <div class="hero-overlay">
+        <p class="hero-label_1">Département Informatique · EFREI Paris</p>
+        <h1 class="hero-title">"Qui ne doute pas<br />acquiert peu."</h1>
+        <p class="hero-label_2">-Léonard de Vinci-</p>
+        <a href="cours_et_formations.html" class="hero-cta">Découvrir nos formations</a>
+      </div>
+    </div>
+  </header>
+
+  
+  <section class="stats-section">
+    <div class="stats-grid">
+      <div class="stat-card">
+        <span class="stat-number" data-target="5">0</span>
+        <span class="stat-label">Enseignants</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-number" data-target="7">0</span>
+        <span class="stat-label">Formations proposées</span>
+      </div>
+      <div class="stat-card">
+        <div class="stat-value-row">
+          <span class="stat-number" data-target="99.99">0</span><span class="stat-unit">%</span>
         </div>
-    </header>
-
-  <!-- INTRO TEXT -->
-  <section class="intro">
-    <p class="label">EFREI</p>
-    <h1>Département informatique</h1>
-    <blockquote>
-      "Qui ne doute pas acquiert peu." – <strong>Léonard de Vinci</strong>
-    </blockquote>
+        <span class="stat-label">Taux d'insertion professionnelle</span>
+      </div>
+    </div>
   </section>
 
+  
+  <section class="testimonials-section">
+    <h2 class="section-title">Ce qu'ils en disent</h2>
+    <div class="carousel-wrapper">
+      <button class="carousel-btn carousel-prev" aria-label="Témoignage précédent">&#8249;</button>
+      <div class="carousel-track" id="carouselTrack">
+
+        <article class="testimonial-card">
+          <p class="testimonial-text">
+            "J’ai pu y rencontrer des gens capables de transformer des idées impossibles en projets réels."
+          </p>
+                    <div class="testimonial-footer">
+            <div class="testimonial-initials">GE</div>
+            <div class="testimonial-identity">
+              <span class="testimonial-name">Galen ERSO</span>
+              <span class="testimonial-meta">Promo 27BBY · Empire Galactique</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="testimonial-card">
+          <p class="testimonial-text">
+            "Cet environnement m’a donné un endroit où construire vite, tester plus vite encore, et surtout apprendre auprès de personnes bien plus brillantes que moi dans leurs domaines."
+          </p>
+                    <div class="testimonial-footer">
+            <div class="testimonial-initials">TS</div>
+            <div class="testimonial-identity">
+              <span class="testimonial-name">Tony STARK</span>
+              <span class="testimonial-meta">Promo 1987 · Stark Industries</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="testimonial-card">
+          <p class="testimonial-text">
+            "Vous savez, moi je ne crois pas qu'il y ait de bonne ou de mauvaise situation. Moi, si je devais résumer ma vie aujourd'hui avec vous, je dirais que c'est d'abord des rencontres. Des gens qui m'ont tendu la main, peut-être à un moment où je ne pouvais pas, où j'étais seul chez moi."
+          </p>
+                    <div class="testimonial-footer">
+            <div class="testimonial-initials">OT</div>
+            <div class="testimonial-identity">
+              <span class="testimonial-name">OTIS</span>
+              <span class="testimonial-meta">Promo 50 av. JC · Cabinet Numérobis</span>
+            </div>
+          </div>
+        </article>
+
+      </div>
+      <button class="carousel-btn carousel-next" aria-label="Témoignage suivant">&#8250;</button>
+    </div>
+    <div class="carousel-dots" id="carouselDots"></div>
+  </section>
+
+  
+  <section class="about-section">
+    <div class="about-grid">
+      <article class="about-card">
+        <h3 class="about-title">Missions &amp; Valeurs</h3>
+        <p class="about-text">
+          Le département informatique forme des ingénieurs capables de relever les défis technologiques de demain.
+          Notre approche pédagogique privilégie l'innovation, l'excellence et l'esprit critique,
+          en préparant nos étudiants à être des acteurs du changement dans le secteur du numérique.
+        </p>
+      </article>
+
+      <article class="about-card">
+        <h3 class="about-title">Environnement d'apprentissage</h3>
+        <p class="about-text">
+          Un cadre d'étude moderne et stimulant, où théorie et pratique se conjuguent harmonieusement.
+          Nos étudiants bénéficient d'équipements à la pointe de la technologie, de projets d'envergure
+          et de la proximité d'une équipe enseignante investie et accessible.
+        </p>
+      </article>
+
+      <article class="about-card">
+        <h3 class="about-title">Débouchés professionnels</h3>
+        <p class="about-text">
+          Nos diplômés intègrent les plus grandes entreprises du secteur ou poursuivent en Master.
+          Leur profil, enrichi d'une solide formation scientifique et d'une expérience pratique,
+          en fait des candidates recherchés par les acteurs majeurs du numérique français et international.
+        </p>
+      </article>
+    </div>
+  </section>
+
+  
+  <section class="news-section">
+    <h2 class="section-title">Actualités &amp; Événements</h2>
+    <div class="news-grid">
+
+      <article class="news-card">
+        <div class="news-date">
+          <span class="news-day">15</span>
+          <span class="news-month">MAI</span>
+        </div>
+        <div class="news-body">
+          <h3 class="news-title">[JPO] Bachelor Informatique &amp; projets étudiants</h3>
+          <p class="news-desc">Journée Portes Ouvertes dédiée au Bachelor Informatique. Venez découvrir nos formations et les projets réalisés par nos étudiants.</p>
+        </div>
+      </article>
+
+      <article class="news-card">
+        <div class="news-date">
+          <span class="news-day">22</span>
+          <span class="news-month">MAI</span>
+        </div>
+        <div class="news-body">
+          <h3 class="news-title">[Forum] Forum entreprises tech &amp; alternance</h3>
+          <p class="news-desc">Rencontrez des entreprises partenaires spécialisées dans la tech et l'informatique. De nombreuses offres d'alternance et de stages à pourvoir.</p>
+        </div>
+      </article>
+
+      <article class="news-card">
+        <div class="news-date">
+          <span class="news-day">27</span>
+          <span class="news-month">MAI</span>
+        </div>
+        <div class="news-body">
+          <h3 class="news-title">[Hackathon] Cybersécurité — Blue Team vs Red Team</h3>
+          <p class="news-desc">Hackathon cybersécurité : deux équipes s'affrontent dans un scénario d'attaque et de défense. Ouvert à tous les étudiants du département.</p>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  
+  <section class="join-banner">
+    <div class="join-banner-inner">
+      <p class="join-banner-text">Vous souhaitez contribuer à la formation des ingénieurs de demain ?</p>
+      <a href="nous_rejoindre.html" class="join-banner-btn">Rejoignez l'équipe</a>
+    </div>
+  </section>
+
+  
   <footer class="site-footer">
     <div class="footer-content">
-      <p class="footer-copy">EFREI 2026 · Département informatique · Tous droits réservés</p>
+      <p class="footer-copy">&copy; 2025-2026 EFREI Paris – Département Informatique</p>
       <nav class="footer-nav" aria-label="Navigation de bas de page">
         <a href="a_propos.html">À propos</a>
       </nav>
     </div>
   </footer>
 
+  <script src="../js/accueil.js"></script>
 </body>
 </html>

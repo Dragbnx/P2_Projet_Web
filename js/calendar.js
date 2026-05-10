@@ -1,10 +1,8 @@
-// Initialiser la date actuelle
+
 let currentDate = new Date();
 
-// Stockage des événements (clé: YYYY-MM-DD, valeur: tableau d'événements)
 let events = JSON.parse(localStorage.getItem('calendarEvents')) ||  {};
 
-// Modèle d'événements académiques (récurrents chaque année)
 const schoolEventsTemplate = [
     { month: 0, day: 18, type: 'JPO', name: 'Journée portes ouvertes - Campus EFREI' },
     { month: 1, day: 7, type: 'Conférence', name: 'Conférence cybersécurité et SOC' },
@@ -25,16 +23,10 @@ const schoolEventsTemplate = [
     { month: 11, day: 5, type: 'Salon', name: 'Salon projets étudiants et démonstrations' }
 ];
 
-/**
- * Retourne un ID stable pour les événements générés par le système
- */
 function buildSeedEventId(year, month, day, index) {
     return `seed-${year}-${String(month + 1).padStart(2, '0')}-${String(day).padStart(2, '0')}-${index}`;
 }
 
-/**
- * Injecte les événements académiques pour une année si absents
- */
 function seedSchoolEventsForYear(year) {
     schoolEventsTemplate.forEach((template, index) => {
         const dateKey = formatDateKey(template.day, template.month, year);
@@ -55,9 +47,6 @@ function seedSchoolEventsForYear(year) {
     });
 }
 
-/**
- * Initialise les événements école de l'année courante et suivante
- */
 function initializeSchoolEvents() {
     const currentYear = new Date().getFullYear();
     seedSchoolEventsForYear(currentYear);
@@ -65,18 +54,12 @@ function initializeSchoolEvents() {
     saveEvents();
 }
 
-/**
- * Formate une clé de date (YYYY-MM-DD)
- */
 function formatDateKey(day, month, year) {
     const dayStr = String(day).padStart(2, '0');
     const monthStr = String(month + 1).padStart(2, '0');
     return `${year}-${monthStr}-${dayStr}`;
 }
 
-/**
- * Récupère l'index du mois à partir de son nom
- */
 function getMonthIndex(monthName) {
     const monthNames = [
         'Janvier', 'Février', 'Mars', 'Avril', 'Mai', 'Juin',
@@ -85,9 +68,6 @@ function getMonthIndex(monthName) {
     return monthNames.indexOf(monthName);
 }
 
-/**
- * Ajoute un événement à une date
- */
 function addEvent(dateKey, eventName) {
     if (!events[dateKey]) {
         events[dateKey] = [];
@@ -106,9 +86,6 @@ function addEvent(dateKey, eventName) {
     }
 }
 
-/**
- * Supprime un événement
- */
 function deleteEvent(dateKey, eventId) {
     if (events[dateKey]) {
         events[dateKey] = events[dateKey].filter(event => event.id !== eventId);
@@ -120,18 +97,12 @@ function deleteEvent(dateKey, eventId) {
     }
 }
 
-/**
- * Sauvegarde les événements dans localStorage
- */
 function saveEvents() {
     localStorage.setItem('calendarEvents', JSON.stringify(events));
 }
 
-/**
- * Affiche un modal pour gérer les événements d'un jour
- */
 function showEventModal(day, month, year, dateKey, dayEvents) {
-    // Créer ou récupérer le modal
+    
     let modal = document.getElementById('eventModal');
     
     if (!modal) {
@@ -141,7 +112,7 @@ function showEventModal(day, month, year, dateKey, dayEvents) {
         document.body.appendChild(modal);
     }
     
-    // Générer le contenu du modal
+    
     let eventsList = dayEvents.map(event => `
         <div class="event-item">
             <span class="event-name">${event.type ? `[${event.type}] ` : ''}${event.name}</span>
@@ -179,16 +150,13 @@ function showEventModal(day, month, year, dateKey, dayEvents) {
     
     modal.style.display = 'block';
     
-    // Focus sur l'input
+    
     setTimeout(() => {
         const input = document.getElementById('eventInput');
         if (input) input.focus();
     }, 100);
 }
 
-/**
- * Ferme le modal d'événements
- */
 function closeEventModal() {
     const modal = document.getElementById('eventModal');
     if (modal) {
@@ -196,9 +164,6 @@ function closeEventModal() {
     }
 }
 
-/**
- * Ajoute un événement depuis le modal
- */
 function addEventFromModal(dateKey) {
     const input = document.getElementById('eventInput');
     if (input) {
@@ -210,44 +175,38 @@ function addEventFromModal(dateKey) {
     }
 }
 
-/**
- * Gère la touche Entrée dans le formulaire d'événement
- */
 document.addEventListener('keypress', function(e) {
     if (e.key === 'Enter' && document.getElementById('eventInput') === document.activeElement) {
         addEventFromModal();
     }
 });
 
-/**
- * Génère et affiche le calendrier pour le mois actuel
- */
 function renderCalendar() {
     const year = currentDate.getFullYear();
     const month = currentDate.getMonth();
     
-    // Noms des mois en français
+    
     const monthNames = [
         'Janvier', 'Février', 'Mars', 'Avril', 'Mai', 'Juin',
         'Juillet', 'Août', 'Septembre', 'Octobre', 'Novembre', 'Décembre'
     ];
     
-    // Afficher le mois et l'année dans le header
+    
     const monthYearElement = document.getElementById('monthYear');
     if (monthYearElement) {
         monthYearElement.textContent = `${monthNames[month]} ${year}`;
     }
     
-    // Obtenir le premier jour du mois (0 = dimanche)
+    
     const firstDay = new Date(year, month, 1).getDay();
     
-    // Obtenir le nombre de jours dans le mois
+    
     const daysInMonth = new Date(year, month + 1, 0).getDate();
     
-    // Ajuster pour que la semaine commence par lundi
+    
     const adjustedFirstDay = firstDay === 0 ? 6 : firstDay - 1;
     
-    // Récupérer l'élément contenant les jours
+    
     const calendarDays = document.getElementById('calendarDays');
     
     if (!calendarDays) {
@@ -255,39 +214,39 @@ function renderCalendar() {
         return;
     }
     
-    // Effacer les jours précédents
+    
     calendarDays.innerHTML = '';
     
-    // Ajouter les cases vides avant le premier jour du mois
+    
     for (let i = 0; i < adjustedFirstDay; i++) {
         const emptyDay = document.createElement('div');
         emptyDay.classList.add('empty-day');
         calendarDays.appendChild(emptyDay);
     }
     
-    // Obtenir la date d'aujourd'hui
+    
     const today = new Date();
     
-    // Ajouter tous les jours du mois
+    
     for (let day = 1; day <= daysInMonth; day++) {
         const dayElement = document.createElement('div');
         dayElement.classList.add('calendar-day');
         
-        // Créer le container pour le jour et les événements
+        
         const dayContent = document.createElement('div');
         dayContent.className = 'day-content';
         
-        // Ajouter le numéro du jour
+        
         const dayNumber = document.createElement('span');
         dayNumber.className = 'day-number';
         dayNumber.textContent = day;
         dayContent.appendChild(dayNumber);
         
-        // Vérifier s'il y a des événements pour ce jour
+        
         const dateKey = formatDateKey(day, month, year);
         const dayEvents = events[dateKey] || [];
         
-        // Ajouter les indicateurs d'événements
+        
         if (dayEvents.length > 0) {
             const eventIndicators = document.createElement('div');
             eventIndicators.className = 'event-indicators';
@@ -312,19 +271,19 @@ function renderCalendar() {
         
         dayElement.appendChild(dayContent);
         
-        // Mettre en évidence le jour actuel
+        
         if (day === today.getDate() && 
             month === today.getMonth() && 
             year === today.getFullYear()) {
             dayElement.classList.add('today');
         }
         
-        // Ajouter un événement de clic pour afficher la date sélectionnée
+        
         dayElement.addEventListener('click', function() {
             handleDayClick(day, monthNames[month], year);
         });
         
-        // Ajouter un événement de survol pour améliorer l'UX
+        
         dayElement.addEventListener('mouseenter', function() {
             this.style.cursor = 'pointer';
         });
@@ -333,58 +292,40 @@ function renderCalendar() {
     }
 }
 
-/**
- * Gère le clic sur un jour du calendrier
- * @param {number} day - Le jour du mois
- * @param {string} month - Le nom du mois
- * @param {number} year - L'année
- */
 function handleDayClick(day, month, year) {
     const selectedDate = `${day} ${month} ${year}`;
     const dateKey = formatDateKey(day, getMonthIndex(month), year);
     
-    // Obtenir les événements du jour
+    
     const dayEvents = events[dateKey] || [];
     
-    // Afficher un modal pour gérer les événements
+    
     showEventModal(day, month, year, dateKey, dayEvents);
 }
 
-/**
- * Navigation au mois précédent
- */
 function previousMonth() {
     currentDate.setMonth(currentDate.getMonth() - 1);
     renderCalendar();
 }
 
-/**
- * Navigation au mois suivant
- */
 function nextMonth() {
     currentDate.setMonth(currentDate.getMonth() + 1);
     renderCalendar();
 }
 
-/**
- * Aller au mois actuel
- */
 function goToToday() {
     currentDate = new Date();
     renderCalendar();
 }
 
-/**
- * Initialiser le calendrier au chargement de la page
- */
 document.addEventListener('DOMContentLoaded', function() {
-    // Ajouter les événements académiques prédéfinis
+    
     initializeSchoolEvents();
 
-    // Afficher le calendrier
+    
     renderCalendar();
     
-    // Attacher les événements aux boutons de navigation
+    
     const prevBtn = document.getElementById('prevMonth');
     const nextBtn = document.getElementById('nextMonth');
     
@@ -396,7 +337,7 @@ document.addEventListener('DOMContentLoaded', function() {
         nextBtn.addEventListener('click', nextMonth);
     }
     
-    // Fermer le modal en cliquant en dehors
+    
     window.addEventListener('click', function(event) {
         const modal = document.getElementById('eventModal');
         if (modal && event.target === modal) {

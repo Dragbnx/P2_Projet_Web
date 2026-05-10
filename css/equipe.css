@@ -5,10 +5,12 @@
 /* ---- Section title ---- */
 .section-title {
   text-align: center;
-  font-size: 26px;
+  font-size: 32px;
   font-weight: 700;
-  color: #2d2d2d;
+  color: #0A316C;
   margin-bottom: 32px;
+  font-family: 'Montserrat', 'Poppins', sans-serif;
+  line-height: 1.3;
 }
 
 /* ---- Filtres ---- */
@@ -35,7 +37,7 @@
 }
 .filter-search:focus {
   outline: none;
-  border-color: rgb(20, 123, 191);
+  border-color: #0A316C;
 }
 .filter-group {
   display: flex;
@@ -54,14 +56,14 @@
 }
 .filter-btn:hover,
 .filter-btn.filter-active {
-  background: rgb(20, 123, 191);
-  border-color: rgb(20, 123, 191);
+  background: #0A316C;
+  border-color: #0A316C;
   color: #fff;
 }
 
 /* ---- Grille des enseignants ---- */
 .teachers-section {
-  background: #f0f0f0;
+  background: #FFFFFF;
   padding: 48px 24px;
   min-height: 300px;
 }
@@ -95,7 +97,7 @@
   border-radius: 50%;
   margin: 0 auto 16px;
   object-fit: cover;
-  background: rgb(20, 123, 191);
+  background: #0A316C;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -127,7 +129,7 @@
   font-size: 11px;
   font-weight: 600;
   background: #e8f4fb;
-  color: rgb(14, 95, 150);
+  color: #0A316C;
 }
 .teacher-statut.vacataire {
   background: #fff3e0;
@@ -180,7 +182,7 @@
   width: 90px;
   height: 90px;
   border-radius: 50%;
-  background: rgb(20, 123, 191);
+  background: #0A316C;
   color: #fff;
   font-size: 32px;
   font-weight: 700;
@@ -197,7 +199,7 @@
 }
 .modal-specialite {
   text-align: center;
-  color: rgb(20, 123, 191);
+  color: #0A316C;
   font-size: 14px;
   margin-bottom: 4px;
 }
@@ -241,20 +243,11 @@
   text-align: center;
 }
 .modal-contact a {
-  color: rgb(20, 123, 191);
+  color: #0A316C;
 }
 
-/* ---- Footer ---- */
-footer {
-  background: #1a1a1a;
-  padding: 24px;
-  text-align: center;
-}
-.footer-nav { margin-bottom: 8px; }
-.footer-nav a { color: #aaa; text-decoration: none; font-size: 14px; }
-.footer-nav a:hover { color: #fff; }
-.footer-copy { color: #666; font-size: 12px; }
-.nav-active { color: rgb(20, 123, 191) !important; font-weight: 600; }
+/* ---- Footer (utilise les styles uniformisés de style.css) ---- */
+.nav-active { color: #0A316C !important; font-weight: 600; }
 
 /* ---- Responsive ---- */
 @media (max-width: 600px) {

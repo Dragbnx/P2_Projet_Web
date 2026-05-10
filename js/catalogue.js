@@ -2,8 +2,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const projects = [
     {
       id: 1,
-      title: 'GTA VI — Portage étudiant',
-      author: 'Équipe Mirage',
+      title: 'GTA VI',
+      author: 'Rockstar Games',
       year: 2026,
       tags: ['jeu', 'AAA'],
       desc: "Participation à GTA VI en tant que developpeurs actif du projet, en étroite collaboration avec Rockstar Games.",
@@ -131,7 +131,7 @@ document.addEventListener('DOMContentLoaded', () => {
     filterAndSort();
   });
 
-  // initial render
+  
   el.sort.value = 'newest';
   filterAndSort();
 });
