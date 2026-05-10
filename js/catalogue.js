@@ -5,8 +5,8 @@ document.addEventListener('DOMContentLoaded', () => {
       title: 'GTA VI — Portage étudiant',
       author: 'Équipe Mirage',
       year: 2026,
-      tags: ['jeu', 'troll'],
-      desc: "Prototype humoristique inspiré de la série GTA. Contenu fictif et non officiel.",
+      tags: ['jeu', 'AAA'],
+      desc: "Participation à GTA VI en tant que developpeurs actif du projet, en étroite collaboration avec Rockstar Games.",
     },
     {
       id: 2,
