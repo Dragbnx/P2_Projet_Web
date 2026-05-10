@@ -1,0 +1,358 @@
+/* =========================================================
+   accueil.css – Styles spécifiques à la page d'accueil
+   ========================================================= */
+
+/* Les règles hero sont dans style.css (partagé par toutes les pages) */
+
+/* ---- Titre de section générique ---- */
+.section-title {
+  text-align: center;
+  font-size: 26px;
+  font-weight: 700;
+  color: #2d2d2d;
+  margin-bottom: 10px;
+}
+
+/* ---- Chiffres clés ---- */
+.stats-section {
+  background: rgb(20, 123, 191);
+  padding: 56px 24px;
+}
+.stats-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 32px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+.stat-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #fff;
+  min-width: 160px;
+}
+.stat-card .stat-value-row {
+  display: flex;
+  align-items: baseline;
+  gap: 2px;
+}
+.stat-number {
+  font-size: 52px;
+  font-weight: 800;
+  line-height: 1;
+}
+.stat-unit {
+  font-size: 32px;
+  font-weight: 800;
+  line-height: 1;
+}
+.stat-label {
+  font-size: 14px;
+  margin-top: 8px;
+  opacity: 0.88;
+  text-align: center;
+}
+
+/* ---- Témoignages / Carrousel ---- */
+/* ---- Témoignages ---- */
+.testimonials-section {
+  background: #fff;
+  padding: 64px 24px;
+}
+.carousel-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  max-width: 780px;
+  margin: 0 auto;
+}
+.carousel-btn {
+  background: none;
+  border: 2px solid #e0e0e0;
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  font-size: 22px;
+  cursor: pointer;
+  flex-shrink: 0;
+  color: #aaa;
+  transition: border-color 0.2s, color 0.2s, background 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.carousel-btn:hover {
+  border-color: rgb(20, 123, 191);
+  color: rgb(20, 123, 191);
+}
+.carousel-track {
+  overflow: hidden;
+  flex: 1;
+}
+
+/* Carte témoignage redessinée */
+.testimonial-card {
+  display: none;
+  background: #fff;
+  border-radius: 12px;
+  padding: 36px 36px 28px;
+  text-align: left;
+  position: relative;
+  border: 1px solid #eee;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+}
+.testimonial-card.active {
+  display: block;
+  animation: fadeSlide 0.3s ease;
+}
+@keyframes fadeSlide {
+  from { opacity: 0; transform: translateX(12px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+/* Grand guillemet décoratif */
+.testimonial-card::before {
+  content: '\201C';
+  position: absolute;
+  top: 12px;
+  left: 28px;
+  font-size: 80px;
+  line-height: 1;
+  color: rgb(20, 123, 191);
+  opacity: 0.15;
+  font-family: Georgia, serif;
+  pointer-events: none;
+}
+
+.testimonial-text {
+  font-style: italic;
+  font-size: 16px;
+  color: #444;
+  line-height: 1.8;
+  margin-bottom: 28px;
+  padding-top: 16px;
+}
+
+/* Bas de carte : avatar + identité */
+.testimonial-footer {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+.testimonial-initials {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgb(20, 123, 191);
+  color: #fff;
+  font-size: 15px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.testimonial-identity {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.testimonial-name {
+  font-size: 14px;
+  font-weight: 700;
+  color: rgb(20, 123, 191);
+  letter-spacing: 0.02em;
+}
+.testimonial-meta {
+  font-size: 12px;
+  color: #999;
+}
+
+/* Points de navigation */
+.carousel-dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 20px;
+}
+.carousel-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #ddd;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+}
+.carousel-dot.active {
+  background: rgb(20, 123, 191);
+  transform: scale(1.3);
+}
+
+/* ---- Présentation du département ---- */
+.about-section {
+  padding: 64px 24px;
+  background: #fff;
+}
+.about-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 40px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.about-card {
+  display: flex;
+  flex-direction: column;
+  padding: 32px;
+  background: #e7e7e7;
+  border-radius: 8px;
+  border-left: 4px solid rgb(20, 123, 191);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.about-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+}
+.about-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: rgb(20, 123, 191);
+  margin-bottom: 16px;
+}
+.about-text {
+  font-size: 15px;
+  line-height: 1.6;
+  color: #555;
+}
+/* ---- Actualités ---- */
+.news-section {
+  background: #ffffff;
+  padding: 64px 24px;
+}
+.news-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  max-width: 1000px;
+  margin: 0 auto;
+  justify-content: center;
+}
+.news-card {
+  background: #e7e7e7;
+  border-radius: 8px;
+  display: flex;
+  gap: 20px;
+  padding: 24px;
+  width: 300px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  transition: box-shadow 0.2s;
+}
+.news-card:hover {
+  box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+}
+.news-date {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: rgb(20, 123, 191);
+  color: #fff;
+  border-radius: 6px;
+  padding: 8px 12px;
+  flex-shrink: 0;
+}
+.news-day {
+  font-size: 22px;
+  font-weight: 800;
+  line-height: 1;
+}
+.news-month {
+  font-size: 12px;
+  text-transform: uppercase;
+  margin-top: 2px;
+}
+.news-title {
+  font-size: 15px;
+  font-weight: 600;
+  color: #2d2d2d;
+  margin-bottom: 8px;
+}
+.news-desc {
+  font-size: 13px;
+  color: #666;
+  line-height: 1.5;
+}
+
+/* ---- Bannière "Rejoindre" ---- */
+.join-banner {
+  background: #2d2d2d;
+  padding: 48px 24px;
+}
+.join-banner-inner {
+  max-width: 700px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+.join-banner-text {
+  color: #fff;
+  font-size: 18px;
+  flex: 1;
+}
+.join-banner-btn {
+  display: inline-block;
+  padding: 14px 28px;
+  background: rgb(20, 123, 191);
+  color: #fff;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: 600;
+  white-space: nowrap;
+  transition: background 0.2s;
+}
+.join-banner-btn:hover {
+  background: rgb(14, 95, 150);
+}
+
+/* ---- Footer ---- */
+footer {
+  background: #1a1a1a;
+  padding: 24px;
+  text-align: center;
+}
+.footer-nav {
+  margin-bottom: 8px;
+}
+.footer-nav a {
+  color: #0c0c0c;
+  text-decoration: none;
+  font-size: 14px;
+}
+.footer-nav a:hover {
+  color: #3f3f3f;
+}
+.footer-copy {
+  color: #666;
+  font-size: 12px;
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 600px) {
+  .stats-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+  .join-banner-inner {
+    flex-direction: column;
+    text-align: center;
+  }
+  .news-card {
+    width: 100%;
+  }
+}
