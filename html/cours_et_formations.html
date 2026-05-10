@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>EFREI – Département informatique</title>
   <link rel="stylesheet" href="../css/style.css" />
+  <script type="text/javascript" src="../js/calendar.js"></script>
 </head>
     <body>
         <header>
@@ -34,8 +35,56 @@
             </div>
         </header>
 
-        <!-- LE CODE -->
+        <!-- Formations -->
+        <section class="formations-section">
+            <h1>Formations proposees par le pole informatique</h1>
+            <p>Le pole informatique de l'ecole propose un parcours progressif allant du Bachelor au cycle ingenieur et aux specialises post-bac+5.</p>
 
+            <ul class="formations-list">
+                <li>Bachelor Informatique et Numerique</li>
+                <li>Bachelor Developpement Web et Applications</li>
+                <li>Bachelor Data et Intelligence Artificielle</li>
+                <li>Cycle Ingenieur Informatique (Programme Grande Ecole)</li>
+                <li>MSc Cloud Computing et DevOps</li>
+                <li>MSc Cybersecurite</li>
+                <li>MSc Data Engineering et IA</li>
+            </ul>
+        </section>
+
+        <!-- CALENDRIER -->
+        <div class="calendar-container">
+            <div class="calendar">
+                <div class="calendar-header">
+                    <button type="button" class="calendar-btn prev-btn" id="prevMonth">❮</button>
+                    <h2 id="monthYear"></h2>
+                    <button type="button" class="calendar-btn next-btn" id="nextMonth">❯</button>
+                </div>
+                
+                <div class="calendar-weekdays">
+                    <div class="weekday">Lun</div>
+                    <div class="weekday">Mar</div>
+                    <div class="weekday">Mer</div>
+                    <div class="weekday">Jeu</div>
+                    <div class="weekday">Ven</div>
+                    <div class="weekday">Sam</div>
+                    <div class="weekday">Dim</div>
+                </div>
+                
+                <div class="calendar-days" id="calendarDays"></div>
+            </div>
+        </div>
+
+        <footer class="site-footer">
+            <div class="footer-content">
+                <p class="footer-copy">EFREI 2026 · Département informatique · Tous droits réservés</p>
+                <nav class="footer-nav" aria-label="Navigation de bas de page">
+                    <a href="a_propos.html">À propos</a>
+                </nav>
+            </div>
+        </footer>
+
+
+        
 
     </body>
 </html>

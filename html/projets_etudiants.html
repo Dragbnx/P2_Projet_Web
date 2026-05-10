@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>EFREI – Département informatique</title>
   <link rel="stylesheet" href="../css/style.css" />
+  <script src="../js/catalogue.js"></script>
 </head>
     <body>
         <header>
@@ -34,8 +35,38 @@
             </div>
         </header>
 
-        <!-- LE CODE -->
+                <!-- Catalogue des projets -->
+                <main class="catalog-section">
+                    <div class="catalog-container">
+                        <div class="catalog-header">
+                            <h1> Catalogue des projets étudiants</h1>
+                            <p class="catalog-sub">Parcourez, recherchez et triez les projets réalisés par les étudiants.</p>
+                        </div>
 
+                        <div class="catalog-controls">
+                            <input id="search" type="search" placeholder="Rechercher des projets par titre, tag ou auteur..." />
+                            <select id="sort">
+                                <option value="newest">Plus récent</option>
+                                <option value="oldest">Plus ancien</option>
+                                <option value="title-asc">Titre A → Z</option>
+                                <option value="title-desc">Titre Z → A</option>
+                            </select>
+                            <button id="reset" type="button">Réinitialiser</button>
+                        </div>
 
+                        <div id="projects" class="project-grid" aria-live="polite"></div>
+                    </div>
+                </main>
+
+                <footer class="site-footer">
+                    <div class="footer-content">
+                        <p class="footer-copy">EFREI 2026 · Département informatique · Tous droits réservés</p>
+                        <nav class="footer-nav" aria-label="Navigation de bas de page">
+                            <a href="a_propos.html">À propos</a>
+                        </nav>
+                    </div>
+                </footer>
+
+                
     </body>
 </html>
