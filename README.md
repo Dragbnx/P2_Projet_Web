@@ -59,7 +59,7 @@ P2_Projet_Web/
 │   ├── paul.png
 │   └── test
 │
-└── js/              # 
+└── js/
     ├── a_propos.js
     ├── accueil.js
     ├── calendar.js
