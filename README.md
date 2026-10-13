@@ -27,7 +27,7 @@ Il s'agit d'un projet de développement de page web. Celle-ci a pour but de simu
 | Pablo **BIRAN** | [@PabBir06](https://github.com/PabBir06) |
 | Paul **CARAMANIAN** | [@Dragbnx](https://github.com/Dragbnx) |
 
-> 🔗 Dépôt : [github.com/Dragbnx/P2_Projet_Web](https://github.com/Dragbnx/P2_Projet_We)
+> 🔗 Dépôt : [github.com/Dragbnx/P2_Projet_Web](https://github.com/Dragbnx/P2_Projet_Web)
 
 ---
 
